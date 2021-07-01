@@ -1,0 +1,30 @@
+{
+  "name": "devrunner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .ts --ext .tsx",
+    "start": "concurrently -n frontend,backend -c blue,black 'cd frontend && npm run serve' 'WAILS_ENV=dev npx nodemon'",
+    "build": "wails build",
+    "build-run": "wails build && ./build/devrunner",
+    "install": "cd frontend && npm i && go get -u github.com/wailsapp/wails/cmd/wails"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.9",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.3.2"
+  }
+}

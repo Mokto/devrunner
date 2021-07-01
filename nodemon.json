@@ -1,0 +1,13 @@
+{
+  "watch": [
+    "."
+  ],
+  "ignore": [
+    "frontend",
+    "build"
+  ],
+  "exec": "wails serve || exit 1",
+  "ext": "go",
+  "signal": "SIGTERM",
+  "delay": 50
+}

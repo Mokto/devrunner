@@ -1,0 +1,36 @@
+@import-normalize;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+body {
+    background: #282A36;
+    color: #F8F8F2;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.ansi-blue-fg {
+    color: #BD93F9;
+}
+
+.ansi-yellow-fg {
+    color: #F1FA8C;
+}
+
+.ansi-red-fg {
+    color: #FF5555;
+}
+
+.ansi-green-fg {
+    color: #50FA7B;
+}
+
+.ansi-cyan-fg {
+    color: #8BE9FD;
+}
+
+.ansi-magenta-fg {
+    color: #FF79C6;
+}
+
+.ansi-black-fg {
+    color: #21222C;
+}
