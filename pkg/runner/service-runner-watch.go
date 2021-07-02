@@ -30,7 +30,6 @@ func (serviceRunner *ServiceRunner) isWatchAllowed(path string) bool {
 }
 
 func (serviceRunner *ServiceRunner) watch() {
-	projectPath := os.Getenv("PROJECT_PATH")
 
 	if serviceRunner.IsWatching {
 		return
@@ -42,10 +41,7 @@ func (serviceRunner *ServiceRunner) watch() {
 	defer serviceRunner.watcher.Close()
 
 	for _, path := range serviceRunner.service.WatchDirectories {
-		filePath := p.Clean(serviceRunner.service.Cwd + "/" + path)
-		if projectPath != "" {
-			filePath = p.Clean(projectPath + "/" + filePath)
-		}
+		filePath := p.Clean(serviceRunner.basePath + "/" + serviceRunner.service.Cwd + "/" + path)
 		if err := filepath.Walk(filePath, func(path string, info fs.FileInfo, err error) error {
 			if !serviceRunner.isWatchAllowed(path) {
 				return nil
