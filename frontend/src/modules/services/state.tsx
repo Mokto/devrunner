@@ -29,28 +29,6 @@ const Service = styled.div<{ active: boolean; disabledWatching: boolean }>`
   margin-bottom: 5px;
   padding-left: 10px;
 
-  button {
-    display: inline-block;
-    padding: 0.25em 0.5em;
-    border: 0.1em solid #ffffff;
-    margin: 0 0.3em 0.3em 0;
-    border-radius: 0.12em;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    color: #ffffff;
-    text-align: center;
-    transition: all 0.2s;
-    background: transparent;
-    cursor: pointer;
-  }
-
-  button:hover {
-    color: #000000;
-    background-color: #ffffff;
-  }
-
   .title {
     height: 30px;
     line-height: 30px;

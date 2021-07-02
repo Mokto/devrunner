@@ -25,7 +25,7 @@ func main() {
 	app := wails.CreateApp(&wails.AppConfig{
 		MinWidth:  1024,
 		MinHeight: 768,
-		Title:     "devrunner",
+		Title:     "DevRunner",
 		JS:        js,
 		CSS:       css,
 		Colour:    "#131313",

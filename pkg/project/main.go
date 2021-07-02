@@ -65,6 +65,15 @@ func (p *Project) SetCurrentProjectFile(file string) {
 	p.notify()
 }
 
+func (p *Project) DeleteRecentProjectFile(file string) {
+	if utility.Includes(p.RecentProjectsFiles, file) {
+		p.RecentProjectsFiles = utility.Remove(p.RecentProjectsFiles, file)
+		p.storage.SetData("RecentProjectsFiles", p.RecentProjectsFiles)
+	}
+
+	p.notify()
+}
+
 func (p *Project) Get() interface{} {
 	return p.store.Get()
 }
