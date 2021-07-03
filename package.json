@@ -8,6 +8,7 @@
     "start": "concurrently -n frontend,backend -c blue,black 'cd frontend && npm run serve' 'WAILS_ENV=dev npx nodemon'",
     "build": "wails build",
     "package": "wails build -p",
+    "package-run": "npm run package && cp -r build/devrunner.app /Applications && open -a devrunner",
     "build-run": "wails build && ./build/devrunner",
     "install": "cd frontend && npm i && go get -u github.com/wailsapp/wails/cmd/wails"
   },
