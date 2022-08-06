@@ -1,0 +1,36 @@
+{
+  "name": "devrunner",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "generate": "cd src-tauri/src/config && cargo test && mv bindings/Application.ts ../../../src/models/application.ts",
+    "lint": "eslint . --ext .ts --ext .tsx --ext .mdx"
+  },
+  "dependencies": {
+    "@ant-design/icons": "4.7.0",
+    "@fontsource/cascadia-code": "^4.2.1",
+    "@tauri-apps/api": "1.0.2",
+    "ansi2html": "^0.0.1",
+    "antd": "4.22.4",
+    "react": "18.2.0",
+    "react-combine-provider": "0.1.3",
+    "react-dom": "18.2.0",
+    "react-router-dom": "6"
+  },
+  "devDependencies": {
+    "@types/react": "18.0.17",
+    "@types/react-dom": "18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
+    "@vitejs/plugin-react": "2.0.0",
+    "eslint": "8.21.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "prettier": "2.7.1",
+    "typescript": "4.7.4",
+    "vite": "3.0.4"
+  }
+}

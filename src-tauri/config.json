@@ -1,0 +1,20 @@
+{
+    "basePath": "../../platforms",
+    "applications": [{
+        "port": 3000,
+        "directory": "frontend",
+        "binary": "node",
+        "name": "frontend",
+        "color": "cyan",
+        "args": ["server.js"]
+    }, {
+        "port": 8004,
+        "directory": "backend-go/ocean/crm-collection",
+        "binary": "go",
+        "name": "crm-collection",
+        "color": "yellow",
+        "args": ["run", "main.go"]
+    }],
+    "env": {
+    }
+}
